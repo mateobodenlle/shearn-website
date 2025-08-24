@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SOCIAL_PROOF } from '../lib/constants';
 
@@ -51,7 +50,7 @@ const SocialProof: React.FC = () => {
           </motion.p>
           
           <div className="flex items-center justify-center space-x-8 lg:space-x-12 opacity-60">
-            {SOCIAL_PROOF.logos.map((logo, index) => (
+            {SOCIAL_PROOF.logos.map((logo) => (
               <motion.div
                 key={logo.name}
                 variants={logoVariants}
@@ -86,7 +85,7 @@ const SocialProof: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {SOCIAL_PROOF.testimonials.map((testimonial, index) => (
+            {SOCIAL_PROOF.testimonials.map((testimonial) => (
               <motion.div
                 key={index}
                 variants={itemVariants}

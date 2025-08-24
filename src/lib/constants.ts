@@ -3,7 +3,7 @@ export const LINKS = {
   demo: "https://demo.weshearn.com",
   contact: "mailto:info@weshearn.com",
   buy: "https://buy.weshearn.com",
-  socwritic: "https://socwritic.com",
+  socwritic: "https://shearn-agent-local.vercel.app/",
   certainty: "https://certainty.weshearn.com",
   twitter: "https://twitter.com/weshearn",
   linkedin: "https://linkedin.com/company/shearn",
@@ -21,21 +21,21 @@ export const ECOSYSTEM_MODULES = [
   {
     title: "Marketplace Shearn",
     description: "Un mercado donde creadores publican contenido en múltiples formatos con libertad de precio y colaboración. Compra solo lo que necesitas.",
-    icon: "/icon-marketplace.svg",
+    icon: "/marketplace.svg",
     iconType: "svg",
     link: null
   },
   {
     title: "Socwritic",
     description: "Herramienta de evaluación crítica y co-creación guiada. Ideal para talleres, feedback estructurado y mejora iterativa.",
-    icon: "/icon-socwritic.svg",
+    icon: "/socwritic.svg",
     iconType: "svg",
     link: LINKS.socwritic
   },
   {
     title: "Certainty",
     description: "Solución para problemas técnicos y aprendizaje activo en entornos STEM con demostraciones paso a paso.",
-    icon: "/icon-certainty.svg",
+    icon: "/certainty.svg",
     iconType: "svg",
     link: LINKS.certainty
   }

@@ -16,7 +16,7 @@ export const logEvent = (eventData: AnalyticsEvent) => {
   }
   
   // Console log for development
-  if (process.env.NODE_ENV === 'development') {
+  if (import.meta.env.DEV) {
     console.log('Analytics Event:', eventData);
   }
 };
@@ -39,7 +39,7 @@ export const trackSectionView = (sectionName: string) => {
   });
 };
 
-export const trackExternalLink = (linkName: string, url: string) => {
+export const trackExternalLink = (linkName: string, _url: string) => {
   logEvent({
     event: 'external_link_click',
     category: 'outbound',

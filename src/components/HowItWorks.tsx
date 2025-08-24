@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { HOW_IT_WORKS_STEPS } from '../lib/constants';
 
@@ -95,7 +94,7 @@ const HowItWorks: React.FC = () => {
 
               {/* Steps */}
               <div className="grid grid-cols-3 gap-8 relative z-10">
-                {HOW_IT_WORKS_STEPS.map((step, index) => (
+                {HOW_IT_WORKS_STEPS.map((step) => (
                   <motion.div
                     key={step.step}
                     variants={itemVariants}

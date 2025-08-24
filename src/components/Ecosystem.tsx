@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ECOSYSTEM_MODULES } from '../lib/constants';
-import { trackCTA, trackExternalLink } from '../lib/analytics';
+import { trackExternalLink } from '../lib/analytics';
 
 const Ecosystem: React.FC = () => {
   const handleModuleClick = (module: typeof ECOSYSTEM_MODULES[0]) => {
@@ -69,7 +69,7 @@ const Ecosystem: React.FC = () => {
           variants={containerVariants}
           className="grid grid-cols-1 lg:grid-cols-3 gap-8"
         >
-          {ECOSYSTEM_MODULES.map((module, index) => (
+          {ECOSYSTEM_MODULES.map((module) => (
             <motion.div
               key={module.title}
               variants={itemVariants}
@@ -79,11 +79,32 @@ const Ecosystem: React.FC = () => {
                 {/* Icon */}
                 <div className="mb-6 flex justify-center">
                   {module.iconType === 'svg' ? (
-                    <img 
-                      src={module.icon} 
-                      alt={module.title}
-                      className="w-16 h-16 object-contain filter group-hover:scale-110 transition-transform duration-300"
-                    />
+                    <div className="w-20 h-20 lg:w-24 lg:h-24 flex items-center justify-center">
+                      {module.title === 'Marketplace Shearn' && (
+                        <svg width="100%" height="100%" viewBox="0 0 267 133" className="text-accent-400 group-hover:scale-110 transition-transform duration-300">
+                          <circle cx="133.5" cy="66.5" r="66.5" fill="#FFC107"/>
+                          <rect x="57" y="52" width="52" height="8" rx="4" fill="white"/>
+                          <rect x="57" y="70" width="76" height="8" rx="4" fill="white"/>
+                          <rect x="147" y="58" width="15" height="15" rx="7.5" fill="white"/>
+                        </svg>
+                      )}
+                      {module.title === 'Socwritic' && (
+                        <svg width="100%" height="100%" viewBox="0 0 267 133" className="text-accent-500 group-hover:scale-110 transition-transform duration-300">
+                          <rect x="66.5" y="16.5" width="134" height="100" rx="8" fill="#00AAFF"/>
+                          <rect x="85" y="35" width="52" height="8" rx="4" fill="white"/>
+                          <rect x="85" y="50" width="76" height="8" rx="4" fill="white"/>
+                          <rect x="85" y="75" width="15" height="15" rx="7.5" fill="white"/>
+                        </svg>
+                      )}
+                      {module.title === 'Certainty' && (
+                        <svg width="100%" height="100%" viewBox="0 0 267 133" className="text-accent-300 group-hover:scale-110 transition-transform duration-300">
+                          <circle cx="133.5" cy="66.5" r="66.5" fill="#FFAC00"/>
+                          <rect x="95" y="52" width="52" height="8" rx="4" fill="white"/>
+                          <rect x="95" y="70" width="25" height="8" rx="4" fill="white"/>
+                          <rect x="95" y="35" width="15" height="15" rx="2" fill="white"/>
+                        </svg>
+                      )}
+                    </div>
                   ) : (
                     <div className="text-5xl">{module.icon}</div>
                   )}

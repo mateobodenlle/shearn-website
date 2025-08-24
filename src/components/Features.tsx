@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { FEATURES } from '../lib/constants';
 
@@ -67,7 +66,7 @@ const Features: React.FC = () => {
           variants={containerVariants}
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
-          {FEATURES.map((feature, index) => (
+          {FEATURES.map((feature) => (
             <motion.div
               key={feature.title}
               variants={itemVariants}
