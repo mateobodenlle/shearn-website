@@ -98,12 +98,12 @@ const Hero: React.FC = () => {
                 type="text"
                 value={searchValue}
                 onChange={(e) => setSearchValue(e.target.value)}
-                placeholder="share, learn, earn"
+                placeholder="Share, Learn, Earn"
                 className="w-full bg-card/80 backdrop-blur-sm border border-accent-500/20 rounded-full px-6 py-4 pr-14 text-lg placeholder-muted focus:outline-none focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 transition-all duration-300 group-hover:border-accent-500/40"
               />
               <button
                 type="submit"
-                className="absolute right-2 top-1/2 -translate-y-1/2 bg-accent-500 hover:bg-accent-600 text-black p-2 rounded-full transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-opacity-50"
+                className="absolute right-3 top-1/2 -translate-y-1/2 bg-accent-500 hover:bg-accent-600 text-black p-2 rounded-full transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-opacity-50"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
