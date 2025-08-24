@@ -65,12 +65,9 @@ const Header: React.FC = () => {
       isScrolled ? 'bg-bg/80 backdrop-blur-md border-b border-card/50' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto container-padding">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo - Empty space for balance since logo is in Hero */}
-          <div className="flex-1 lg:flex-none"></div>
-
-          {/* Desktop Navigation - Centered */}
-          <nav className="hidden lg:flex items-center space-x-8 mx-auto">
+        <div className="relative flex items-center h-16 lg:h-20">
+          {/* Desktop Navigation - Absolutely centered */}
+          <nav className="hidden lg:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
             {NAVIGATION_ITEMS.map((item) => (
               <button
                 key={item.id}
@@ -94,7 +91,7 @@ const Header: React.FC = () => {
           </nav>
 
           {/* Right side - CTA Button and Mobile Menu */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 ml-auto">
             <motion.button
               onClick={handleBuyClick}
               className="bg-white hover:bg-gray-100 text-black font-semibold px-4 py-2 rounded-full transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
