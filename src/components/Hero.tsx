@@ -118,11 +118,11 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.0 }}
-          className="w-full flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-12 mb-8"
+          className="w-full flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 mb-8"
         >
           <motion.button
             onClick={handleDemoClick}
-            className="btn-primary text-lg px-8 py-4"
+            className="btn-primary text-lg px-8 py-4 w-48"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -131,7 +131,7 @@ const Hero: React.FC = () => {
           
           <motion.button
             onClick={handleWhitepaperClick}
-            className="btn-secondary text-lg px-8 py-4"
+            className="btn-secondary text-lg px-8 py-4 w-48"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
