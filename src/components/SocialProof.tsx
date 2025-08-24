@@ -85,7 +85,7 @@ const SocialProof: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {SOCIAL_PROOF.testimonials.map((testimonial) => (
+            {SOCIAL_PROOF.testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}

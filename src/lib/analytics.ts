@@ -16,7 +16,7 @@ export const logEvent = (eventData: AnalyticsEvent) => {
   }
   
   // Console log for development
-  if (import.meta.env.DEV) {
+  if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
     console.log('Analytics Event:', eventData);
   }
 };
