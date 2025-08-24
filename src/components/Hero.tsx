@@ -122,7 +122,7 @@ const Hero: React.FC = () => {
         >
           <motion.button
             onClick={handleDemoClick}
-            className="btn-primary text-lg px-8 py-4 w-48"
+            className="btn-primary text-lg px-8 py-4 w-56"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -131,7 +131,7 @@ const Hero: React.FC = () => {
           
           <motion.button
             onClick={handleWhitepaperClick}
-            className="btn-secondary text-lg px-8 py-4 w-48"
+            className="btn-secondary text-lg px-8 py-4 w-56"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
