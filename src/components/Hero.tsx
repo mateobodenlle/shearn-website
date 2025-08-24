@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 lg:pt-0">
+    <section className="relative min-h-screen flex items-center justify-center pt-32 lg:pt-20">
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Radial Glow */}
