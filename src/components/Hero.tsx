@@ -118,7 +118,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.0 }}
-          className="w-full flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
+          className="w-full flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8"
         >
           <motion.button
             onClick={handleDemoClick}
@@ -129,23 +129,6 @@ const Hero: React.FC = () => {
             Ver demo
           </motion.button>
           
-          {/* Scroll Indicator - Between buttons */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.5 }}
-            className="flex flex-col items-center space-y-1"
-          >
-            <span className="text-muted text-xs">Descubre más</span>
-            <motion.div
-              animate={{ y: [0, 6, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-5 h-8 border-2 border-muted/30 rounded-full flex justify-center"
-            >
-              <div className="w-1 h-2 bg-accent-500 rounded-full mt-1"></div>
-            </motion.div>
-          </motion.div>
-          
           <motion.button
             onClick={handleWhitepaperClick}
             className="btn-secondary text-lg px-8 py-4"
@@ -154,6 +137,23 @@ const Hero: React.FC = () => {
           >
             Leer whitepaper
           </motion.button>
+        </motion.div>
+
+        {/* Scroll Indicator - Centered independently */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1.5 }}
+          className="flex flex-col items-center space-y-1"
+        >
+          <span className="text-muted text-xs">Descubre más</span>
+          <motion.div
+            animate={{ y: [0, 6, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="w-5 h-8 border-2 border-muted/30 rounded-full flex justify-center"
+          >
+            <div className="w-1 h-2 bg-accent-500 rounded-full mt-1"></div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
