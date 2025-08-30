@@ -43,24 +43,24 @@ export const ECOSYSTEM_MODULES = [
 
 export const FEATURES = [
   {
-    title: "Libre mercado y colaboración",
-    description: "Los creadores compiten y cooperan. El incentivo es simple: aportar máximo valor.",
-    icon: "🤝"
+    title: "Aprendizaje activo a través de la escritura",
+    description: "Socwritic te ayuda a desarrollar ideas y recibir feedback estructurado que mejora tu comprensión.",
+    icon: "✍️"
   },
   {
-    title: "Aprendizaje activo",
-    description: "Zona de trabajo integrada para practicar, prototipar y medir progreso.",
-    icon: "⚡"
+    title: "Validación de conocimiento con IA",
+    description: "Certainty verifica tu comprensión y resuelve dudas de forma instantánea y precisa.",
+    icon: "🤖"
   },
   {
-    title: "Recomendación orientada a aprender",
-    description: "Algoritmos que maximizan tu aprendizaje, no tu tiempo de pantalla.",
+    title: "Herramientas que se adaptan a ti",
+    description: "Cada herramienta se ajusta a tu ritmo y estilo de aprendizaje único.",
     icon: "🎯"
   },
   {
-    title: "Remuneración indirecta",
-    description: "La comunidad también es recompensada por feedback útil y mejoras.",
-    icon: "💎"
+    title: "Integración institucional",
+    description: "Soluciones que funcionan tanto para estudiantes individuales como para instituciones educativas.",
+    icon: "🏫"
   }
 ];
 

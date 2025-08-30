@@ -48,14 +48,14 @@ const Features: React.FC = () => {
             variants={itemVariants}
             className="text-3xl lg:text-5xl font-display font-bold text-text mb-6"
           >
-            Construido para <span className="text-gradient">maximizar valor</span>
+            Diseñado para el <span className="text-gradient">aprendizaje real</span>
           </motion.h2>
           <motion.p 
             variants={itemVariants}
             className="text-lg text-muted max-w-3xl mx-auto"
           >
-            Nuestro algoritmo recomienda lo que te ayuda a aprender mejor, 
-            no lo que consume más tiempo de pantalla.
+            Herramientas que priorizan tu comprensión y crecimiento intelectual, 
+            adaptándose a tu proceso único de aprendizaje.
           </motion.p>
         </motion.div>
 
@@ -113,22 +113,22 @@ const Features: React.FC = () => {
           className="text-center mt-16"
         >
           <p className="text-muted text-lg mb-8">
-            La comunidad también gana cuando aporta: comentarios útiles, mejoras y curación de contenido.
+            Potencia tu aprendizaje con herramientas diseñadas para la comprensión profunda y el crecimiento intelectual.
           </p>
           
           {/* Stats */}
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-12">
             <div className="text-center">
-              <div className="text-3xl font-bold text-gradient mb-2">100%</div>
-              <div className="text-muted text-sm">Transparencia</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-gradient mb-2">0%</div>
-              <div className="text-muted text-sm">Comisiones ocultas</div>
-            </div>
-            <div className="text-center">
               <div className="text-3xl font-bold text-gradient mb-2">24/7</div>
               <div className="text-muted text-sm">Disponibilidad</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-gradient mb-2">∞</div>
+              <div className="text-muted text-sm">Adaptabilidad</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-gradient mb-2">2</div>
+              <div className="text-muted text-sm">Herramientas activas</div>
             </div>
           </div>
         </motion.div>
