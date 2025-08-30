@@ -76,6 +76,12 @@ const Ecosystem: React.FC = () => {
               className="group relative"
             >
               <div className="relative bg-card/50 backdrop-blur-sm border border-card/50 rounded-2xl p-8 h-full transition-all duration-300 hover:border-accent-500/30 hover:bg-card/70 card-hover">
+                {/* Coming Soon Badge - Only for Marketplace Shearn */}
+                {module.title === 'Marketplace Shearn' && (
+                  <div className="absolute -top-2 -right-2 bg-accent-500 text-black px-3 py-1 rounded-full text-xs font-semibold shadow-lg z-10">
+                    Coming Soon
+                  </div>
+                )}
                 {/* Icon */}
                 <div className="mb-6 flex justify-center">
                   {module.iconType === 'svg' ? (
