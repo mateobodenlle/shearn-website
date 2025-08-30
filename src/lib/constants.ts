@@ -67,18 +67,18 @@ export const FEATURES = [
 export const HOW_IT_WORKS_STEPS = [
   {
     step: "01",
-    title: "Publica o descubre contenido de calidad",
-    description: "Encuentra exactamente lo que necesitas aprender o comparte tu expertise."
+    title: "Explora y escribe",
+    description: "Usa Socwritic para desarrollar ideas, recibir feedback estructurado y mejorar tu escritura de forma iterativa."
   },
   {
     step: "02", 
-    title: "Trabaja en modo activo con herramientas conectadas",
-    description: "Usa Socwritic para feedback estructurado y Certainty para resolución de problemas."
+    title: "Valida tu conocimiento",
+    description: "Emplea Certainty para verificar tu comprensión, resolver dudas y asegurar que dominas los conceptos."
   },
   {
     step: "03",
-    title: "Gana reputación y rendimiento cuando aportas valor",
-    description: "Tu participación activa es reconocida y recompensada por la comunidad."
+    title: "Mejora continuamente",
+    description: "Itera entre ambas herramientas para un aprendizaje profundo y sostenible que se adapta a tu ritmo."
   }
 ];
 

@@ -178,11 +178,11 @@ const HowItWorks: React.FC = () => {
           className="text-center mt-16 pt-8 border-t border-card/30"
         >
           <p className="text-muted text-lg mb-8">
-            Tu participación activa es reconocida y recompensada por la comunidad.
+            Desde el estudiante autodidacta hasta las grandes instituciones educativas.
           </p>
           
           {/* Benefits */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
             <div className="text-center p-4">
               <div className="text-2xl mb-2">🎯</div>
               <div className="font-semibold text-text mb-1">Aprendizaje dirigido</div>
@@ -195,10 +195,26 @@ const HowItWorks: React.FC = () => {
             </div>
             <div className="text-center p-4">
               <div className="text-2xl mb-2">💡</div>
-              <div className="font-semibold text-text mb-1">Valor reconocido</div>
-              <div className="text-sm text-muted">Recompensas por contribuir</div>
+              <div className="font-semibold text-text mb-1">Conocimiento validado</div>
+              <div className="text-sm text-muted">Comprensión verificada con IA</div>
             </div>
           </div>
+
+          {/* B2B Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 1.0 }}
+            className="bg-card/30 backdrop-blur-sm border border-card/50 rounded-2xl p-8 max-w-4xl mx-auto"
+          >
+            <h3 className="text-xl font-display font-semibold text-text mb-4">
+              También para instituciones
+            </h3>
+            <p className="text-muted leading-relaxed">
+              Socwritic y Certainty se integran naturalmente en currículos universitarios, programas de formación corporativa y métodos pedagógicos tradicionales, potenciando tanto el estudio individual como los procesos educativos institucionales.
+            </p>
+          </motion.div>
         </motion.div>
       </div>
     </section>
