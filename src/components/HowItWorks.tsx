@@ -218,14 +218,35 @@ const HowItWorks: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 1.0 }}
-            className="bg-card/30 backdrop-blur-sm border border-card/50 rounded-2xl p-8 max-w-4xl mx-auto"
+            className="bg-card/30 backdrop-blur-sm border border-card/50 rounded-2xl p-8 max-w-4xl mx-auto relative overflow-hidden"
           >
-            <h3 className="text-xl font-display font-semibold text-text mb-4">
-              También para instituciones
-            </h3>
-            <p className="text-muted leading-relaxed">
-              Socwritic y Certainty se integran naturalmente en currículos universitarios, programas de formación corporativa y métodos pedagógicos tradicionales, potenciando tanto el estudio individual como los procesos educativos institucionales.
-            </p>
+            {/* Background decoration */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-accent-500/10 to-transparent rounded-full blur-2xl"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-accent-400/5 to-transparent rounded-full blur-xl"></div>
+            
+            <div className="relative z-10">
+              <h3 className="text-xl font-display font-semibold text-text mb-4">
+                También para instituciones
+              </h3>
+              <p className="text-muted leading-relaxed">
+                Socwritic y Certainty se integran naturalmente en currículos universitarios, programas de formación corporativa y métodos pedagógicos tradicionales, potenciando tanto el estudio individual como los procesos educativos institucionales.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Connecting Visual Element */}
+          <motion.div
+            initial={{ opacity: 0, scaleY: 0 }}
+            whileInView={{ opacity: 1, scaleY: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.2, delay: 1.2, ease: "easeOut" }}
+            className="flex justify-center mt-12 mb-8"
+          >
+            <div className="relative">
+              <div className="w-0.5 h-16 bg-gradient-to-b from-accent-500/50 to-transparent"></div>
+              <div className="absolute top-full left-1/2 -translate-x-1/2 w-2 h-2 bg-accent-500 rounded-full animate-pulse"></div>
+              <div className="absolute top-full left-1/2 -translate-x-1/2 w-4 h-4 border border-accent-500/30 rounded-full animate-ping"></div>
+            </div>
           </motion.div>
         </motion.div>
       </div>
