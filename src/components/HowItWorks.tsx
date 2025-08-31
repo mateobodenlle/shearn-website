@@ -175,7 +175,7 @@ const HowItWorks: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mt-8 pt-4 border-t border-card/30"
+          className="text-center mt-4 pt-2 border-t border-card/30"
         >
 
           {/* B2B Section */}
@@ -206,7 +206,7 @@ const HowItWorks: React.FC = () => {
             whileInView={{ opacity: 1, scaleY: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1.2, delay: 1.2, ease: "easeOut" }}
-            className="flex justify-center mt-2 mb-1"
+            className="flex justify-center mt-1 mb-0"
           >
             <div className="relative">
               <div className="w-0.5 h-16 bg-gradient-to-b from-accent-500/50 to-transparent"></div>
