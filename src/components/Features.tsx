@@ -123,34 +123,6 @@ const Features: React.FC = () => {
           ))}
         </motion.div>
 
-        {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mt-16"
-        >
-          <p className="text-muted text-lg mb-8">
-            Potencia tu aprendizaje con herramientas diseñadas para la comprensión profunda y el crecimiento intelectual.
-          </p>
-          
-          {/* Stats */}
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-12">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-gradient mb-2">24/7</div>
-              <div className="text-muted text-sm">Disponibilidad</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-gradient mb-2">∞</div>
-              <div className="text-muted text-sm">Adaptabilidad</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-gradient mb-2">2</div>
-              <div className="text-muted text-sm">Herramientas activas</div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
