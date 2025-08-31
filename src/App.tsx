@@ -6,6 +6,7 @@ import Ecosystem from './components/Ecosystem';
 import Features from './components/Features';
 import HowItWorks from './components/HowItWorks';
 import Products from './components/Products';
+import Contact from './components/Contact';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 
@@ -67,9 +68,8 @@ function App() {
           <Products />
         </section>
         
-        
-        <section id="token">
-          {/* Token section will be part of CTA for now */}
+        <section id="contacto">
+          <Contact />
         </section>
         
         <section id="cta">
