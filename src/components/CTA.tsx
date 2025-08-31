@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { LINKS } from '../lib/constants';
-import { trackCTA, trackExternalLink } from '../lib/analytics';
+import { trackCTA } from '../lib/analytics';
 
 const CTA: React.FC = () => {
   const handleDemoClick = () => {
@@ -14,10 +14,6 @@ const CTA: React.FC = () => {
     window.open(LINKS.contact, '_blank', 'noopener,noreferrer');
   };
 
-  const handleWhitepaperClick = () => {
-    trackExternalLink('Whitepaper', LINKS.whitepaper);
-    window.open(LINKS.whitepaper, '_blank', 'noopener,noreferrer');
-  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
