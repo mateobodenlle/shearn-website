@@ -206,44 +206,6 @@ const Products: React.FC = () => {
           ))}
         </motion.div>
 
-        {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mt-16 pt-8 border-t border-card/30"
-        >
-          <p className="text-muted text-lg mb-8">
-            ¿Listo para experimentar el poder del ecosistema completo?
-          </p>
-          
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <motion.button
-              onClick={() => {
-                trackCTA('Ver Demo Completo', 'products-bottom');
-                window.open(LINKS.demo, '_blank', 'noopener,noreferrer');
-              }}
-              className="btn-primary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Ver demo completo
-            </motion.button>
-            
-            <motion.button
-              onClick={() => {
-                trackCTA('Contactar', 'products-bottom');
-                window.open(LINKS.contact, '_blank', 'noopener,noreferrer');
-              }}
-              className="btn-secondary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Hablar con el equipo
-            </motion.button>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
