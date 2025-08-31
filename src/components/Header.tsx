@@ -41,8 +41,9 @@ const Header: React.FC = () => {
   };
 
   const handleBuyClick = () => {
-    trackCTA('Buy Shearn', 'header');
-    window.open(LINKS.buy, '_blank', 'noopener,noreferrer');
+    // Disabled for now
+    // trackCTA('Buy Shearn', 'header');
+    // window.open(LINKS.buy, '_blank', 'noopener,noreferrer');
   };
 
   const handleNavClick = (item: typeof NAVIGATION_ITEMS[0]) => {
@@ -94,12 +95,11 @@ const Header: React.FC = () => {
           <div className="flex items-center space-x-4 ml-auto">
             <motion.button
               onClick={handleBuyClick}
-              className="bg-white hover:bg-gray-100 text-black font-semibold px-4 py-2 rounded-full transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              className="bg-gray-400 text-gray-600 font-semibold px-4 py-2 rounded-full cursor-not-allowed opacity-50"
+              disabled
             >
-              <span className="text-black">Buy </span>
-              <span className="text-accent-600 font-bold">Shearn</span>
+              <span className="text-gray-600">Buy </span>
+              <span className="text-gray-600 font-bold">Shearn</span>
             </motion.button>
 
             {/* Mobile Menu Button */}
