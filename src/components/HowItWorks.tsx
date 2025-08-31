@@ -240,7 +240,7 @@ const HowItWorks: React.FC = () => {
             whileInView={{ opacity: 1, scaleY: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1.2, delay: 1.2, ease: "easeOut" }}
-            className="flex justify-center mt-12 mb-8"
+            className="flex justify-center mt-8 mb-4"
           >
             <div className="relative">
               <div className="w-0.5 h-16 bg-gradient-to-b from-accent-500/50 to-transparent"></div>
