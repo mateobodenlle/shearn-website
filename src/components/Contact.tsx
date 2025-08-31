@@ -143,7 +143,7 @@ const Contact: React.FC = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full bg-card/50 border border-card/50 rounded-lg px-4 py-3 text-text placeholder-muted focus:outline-none focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 transition-all duration-300"
+                    className="w-full bg-accent-500/5 border border-card/50 rounded-lg px-4 py-3 text-text placeholder-muted focus:outline-none focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 transition-all duration-300"
                     placeholder="Tu nombre"
                   />
                 </div>
@@ -158,7 +158,7 @@ const Contact: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full bg-card/50 border border-card/50 rounded-lg px-4 py-3 text-text placeholder-muted focus:outline-none focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 transition-all duration-300"
+                    className="w-full bg-accent-500/5 border border-card/50 rounded-lg px-4 py-3 text-text placeholder-muted focus:outline-none focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 transition-all duration-300"
                     placeholder="tu@email.com"
                   />
                 </div>
@@ -190,7 +190,7 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full bg-card/50 border border-card/50 rounded-lg px-4 py-3 text-text placeholder-muted focus:outline-none focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 transition-all duration-300 resize-vertical"
+                  className="w-full bg-accent-500/5 border border-card/50 rounded-lg px-4 py-3 text-text placeholder-muted focus:outline-none focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 transition-all duration-300 resize-vertical"
                   placeholder="Cuéntanos más sobre tu proyecto o necesidades..."
                 />
               </motion.div>

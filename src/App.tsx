@@ -6,12 +6,13 @@ import Ecosystem from './components/Ecosystem';
 import Features from './components/Features';
 import HowItWorks from './components/HowItWorks';
 import Products from './components/Products';
-import Contact from './components/Contact';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
+import ContactPage from './pages/ContactPage';
 
 function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [currentPage, setCurrentPage] = useState('home');
 
   useEffect(() => {
     const updateScrollProgress = () => {
@@ -21,9 +22,31 @@ function App() {
       setScrollProgress(scrolled);
     };
 
-    window.addEventListener('scroll', updateScrollProgress);
-    return () => window.removeEventListener('scroll', updateScrollProgress);
+    if (currentPage === 'home') {
+      window.addEventListener('scroll', updateScrollProgress);
+      return () => window.removeEventListener('scroll', updateScrollProgress);
+    }
+  }, [currentPage]);
+
+  // Simple routing based on hash
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.slice(1);
+      if (hash === 'contacto') {
+        setCurrentPage('contact');
+      } else {
+        setCurrentPage('home');
+      }
+    };
+
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
+
+  if (currentPage === 'contact') {
+    return <ContactPage />;
+  }
 
   return (
     <div className="min-h-screen bg-bg relative overflow-x-hidden">
@@ -66,10 +89,6 @@ function App() {
         
         <section id="products">
           <Products />
-        </section>
-        
-        <section id="contacto">
-          <Contact />
         </section>
         
         <section id="cta">

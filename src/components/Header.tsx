@@ -55,7 +55,7 @@ const Header: React.FC = () => {
       window.open(LINKS.demo, '_blank', 'noopener,noreferrer');
     } else if (item.id === 'contacto') {
       trackCTA('Contact', 'header');
-      window.open(LINKS.contact, '_blank', 'noopener,noreferrer');
+      window.location.hash = 'contacto';
     } else {
       scrollToSection(item.id);
     }
