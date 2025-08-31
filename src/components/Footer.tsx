@@ -89,7 +89,7 @@ const Footer: React.FC = () => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="tu@email.com"
-                      className="flex-1 bg-card/50 border border-card/50 rounded-lg px-4 py-3 text-text placeholder-muted focus:outline-none focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 transition-all duration-300"
+                      className="flex-1 bg-accent-500/5 border border-card/50 rounded-lg px-4 py-3 text-text placeholder-muted focus:outline-none focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20 transition-all duration-300"
                       required
                     />
                     <motion.button
