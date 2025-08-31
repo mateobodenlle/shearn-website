@@ -66,7 +66,7 @@ const Products: React.FC = () => {
   ];
 
   return (
-    <section className="section-padding bg-bg relative overflow-hidden">
+    <section className="py-16 lg:py-20 bg-bg relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent-500/5 rounded-full blur-3xl"></div>
