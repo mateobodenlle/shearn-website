@@ -45,22 +45,22 @@ export const FEATURES = [
   {
     title: "Aprendizaje activo a través de la escritura",
     description: "Socwritic te ayuda a desarrollar ideas y recibir feedback estructurado que mejora tu comprensión.",
-    icon: "✍️"
+    icon: "pen"
   },
   {
     title: "Validación de conocimiento con IA",
     description: "Certainty verifica tu comprensión y resuelve dudas de forma instantánea y precisa.",
-    icon: "🤖"
+    icon: "brain"
   },
   {
     title: "Herramientas que se adaptan a ti",
     description: "Cada herramienta se ajusta a tu ritmo y estilo de aprendizaje único.",
-    icon: "🎯"
+    icon: "target"
   },
   {
     title: "Integración institucional",
     description: "Soluciones que funcionan tanto para estudiantes individuales como para instituciones educativas.",
-    icon: "🏫"
+    icon: "building"
   }
 ];
 

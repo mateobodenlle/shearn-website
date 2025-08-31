@@ -81,8 +81,27 @@ const Features: React.FC = () => {
                 {/* Content */}
                 <div className="relative z-10">
                   {/* Icon */}
-                  <div className="text-4xl mb-6">
-                    {feature.icon}
+                  <div className="w-12 h-12 mb-6 flex items-center justify-center">
+                    {feature.icon === 'pen' && (
+                      <svg className="w-full h-full text-accent-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                      </svg>
+                    )}
+                    {feature.icon === 'brain' && (
+                      <svg className="w-full h-full text-accent-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                      </svg>
+                    )}
+                    {feature.icon === 'target' && (
+                      <svg className="w-full h-full text-accent-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+                      </svg>
+                    )}
+                    {feature.icon === 'building' && (
+                      <svg className="w-full h-full text-accent-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/>
+                      </svg>
+                    )}
                   </div>
 
                   {/* Text */}
