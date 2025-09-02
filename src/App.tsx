@@ -1,103 +1,15 @@
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Ecosystem from './components/Ecosystem';
-import Features from './components/Features';
-import HowItWorks from './components/HowItWorks';
-import Products from './components/Products';
-import CTA from './components/CTA';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 
 function App() {
-  const [scrollProgress, setScrollProgress] = useState(0);
-  const [currentPage, setCurrentPage] = useState('home');
-
-  useEffect(() => {
-    const updateScrollProgress = () => {
-      const scrollPx = document.documentElement.scrollTop;
-      const winHeightPx = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (scrollPx / winHeightPx) * 100;
-      setScrollProgress(scrolled);
-    };
-
-    if (currentPage === 'home') {
-      window.addEventListener('scroll', updateScrollProgress);
-      return () => window.removeEventListener('scroll', updateScrollProgress);
-    }
-  }, [currentPage]);
-
-  // Simple routing based on hash
-  useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.slice(1);
-      if (hash === 'contacto') {
-        setCurrentPage('contact');
-      } else {
-        setCurrentPage('home');
-      }
-    };
-
-    handleHashChange();
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
-
-  if (currentPage === 'contact') {
-    return <ContactPage />;
-  }
-
   return (
-    <div className="min-h-screen bg-bg relative overflow-x-hidden">
-      {/* Reading Progress Bar */}
-      <motion.div
-        className="reading-progress fixed top-0 left-0 h-0.5 bg-gradient-to-r from-accent-500 to-accent-400 z-50"
-        style={{
-          width: `${scrollProgress}%`,
-          transformOrigin: 'left'
-        }}
-        initial={{ scaleX: 0 }}
-        animate={{ scaleX: 1 }}
-        transition={{ duration: 0.1 }}
-      />
-
-      {/* Background Effects */}
-      <div className="fixed inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-accent-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-accent-400/3 rounded-full blur-2xl"></div>
-      </div>
-
-      <Header />
-      
-      <main className="relative">
-        <section id="home">
-          <Hero />
-        </section>
-        
-        <section id="ecosystem">
-          <Ecosystem />
-        </section>
-        
-        <section id="features">
-          <Features />
-        </section>
-        
-        <section id="how-it-works">
-          <HowItWorks />
-        </section>
-        
-        <section id="products">
-          <Products />
-        </section>
-        
-        <section id="cta">
-          <CTA />
-        </section>
-      </main>
-      
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/contacto" element={<ContactPage />} />
+      </Routes>
+    </Router>
   );
 }
 

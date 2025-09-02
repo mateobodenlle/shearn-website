@@ -1,36 +1,50 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { NAVIGATION_ITEMS, LINKS } from '../lib/constants';
 import { trackCTA, trackExternalLink } from '../lib/analytics';
 
 const Header: React.FC = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    // Set active section based on current route
+    if (location.pathname === '/contacto') {
+      setActiveSection('contacto');
+    } else {
+      setActiveSection('home');
+    }
+  }, [location]);
+
+  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
       
-      // Update active section based on scroll position
-      const sections = ['home', 'ecosystem', 'features', 'how-it-works', 'products', 'cta'];
-      const currentSection = sections.find(section => {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          return rect.top <= 100 && rect.bottom >= 100;
+      // Only update active section based on scroll on home page
+      if (location.pathname === '/') {
+        const sections = ['home', 'ecosystem', 'features', 'how-it-works', 'products', 'cta'];
+        const currentSection = sections.find(section => {
+          const element = document.getElementById(section);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            return rect.top <= 100 && rect.bottom >= 100;
+          }
+          return false;
+        });
+        
+        if (currentSection) {
+          setActiveSection(currentSection);
         }
-        return false;
-      });
-      
-      if (currentSection) {
-        setActiveSection(currentSection);
       }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [location]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -55,9 +69,18 @@ const Header: React.FC = () => {
       window.open(LINKS.demo, '_blank', 'noopener,noreferrer');
     } else if (item.id === 'contacto') {
       trackCTA('Contact', 'header');
-      window.location.hash = 'contacto';
+      navigate('/contacto');
+    } else if (item.id === 'home') {
+      navigate('/');
     } else {
-      scrollToSection(item.id);
+      // Only scroll to section if we're on home page
+      if (location.pathname === '/') {
+        scrollToSection(item.id);
+      } else {
+        // Navigate to home first, then scroll
+        navigate('/');
+        setTimeout(() => scrollToSection(item.id), 100);
+      }
     }
   };
 
