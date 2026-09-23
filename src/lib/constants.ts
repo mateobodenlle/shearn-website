@@ -7,7 +7,9 @@ export const LINKS = {
   certainty: "https://certainty.weshearn.com",
   twitter: "https://twitter.com/weshearn",
   linkedin: "https://linkedin.com/company/shearn",
-  instagram: "https://instagram.com/weshearn"
+  instagram: "https://instagram.com/weshearn",
+  privacy: "https://vera.weshearn.com/privacy.html",
+  waitlistApi: import.meta.env.VITE_WAITLIST_API ?? "https://vera.weshearn.com/waitlist"
 };
 
 export const NAVIGATION_ITEMS = [

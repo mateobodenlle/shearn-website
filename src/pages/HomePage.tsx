@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Header from '../components/Header';
+import Waitlist from '../components/Waitlist';
 import Hero from '../components/Hero';
 import Ecosystem from '../components/Ecosystem';
 import Features from '../components/Features';
@@ -47,6 +48,10 @@ const HomePage: React.FC = () => {
       <Header />
       
       <main className="relative">
+        <section id="waitlist">
+          <Waitlist />
+        </section>
+
         <section id="home">
           <Hero />
         </section>
