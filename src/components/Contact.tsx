@@ -298,7 +298,7 @@ const Contact: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {founders.map((founder, index) => (
+            {founders.map((founder) => (
               <motion.div
                 key={founder.name}
                 variants={itemVariants}
